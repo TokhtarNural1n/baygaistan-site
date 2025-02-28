@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Азаматтық алу – Байгайстан</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Хедер -->
+    <header class="bg-blue-900 text-white py-6 shadow-lg text-center">
+        <h1 class="text-5xl font-bold uppercase">📜 Байгайстан Азаматы болыңыз!</h1>
+        <p class="text-lg mt-2 italic">"Салық төлемейтін, демалысы көп елге қош келдіңіз!"</p>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="bg-gray-800 py-4 text-white flex justify-center space-x-8 text-lg font-semibold shadow-md">
+        <a href="index.html" class="hover:text-yellow-400 transition">🏠 Басты бет</a>
+        <a href="news.html" class="hover:text-yellow-400 transition">📰 Жаңалықтар</a>
+        <a href="holidays.html" class="hover:text-yellow-400 transition">🎉 Ұлттық мерекелер</a>
+        <a href="government.html" class="hover:text-yellow-400 transition">🏛 Үкімет</a>
+        <a href="contact.html" class="hover:text-yellow-400 transition">📞 Байланыс</a>
+        <a href="travel.html" class="hover:text-yellow-400 transition">🛫 Саяхат және туризм</a>
+    </nav>
+    
+    <!-- Паспорт алу бөлімі -->
+<section class="mt-10 p-10 text-center">
+    <h2 class="text-4xl font-bold">Байгайстан Республикасының Азаматтығын Алу</h2>
+    <p class="mt-4 text-lg font-light">Тек 3 қадам арқылы азамат болыңыз:</p>
+
+    <div class="mt-10 bg-white p-6 rounded-lg shadow-lg w-96 mx-auto">
+        <!-- Сурет жүктеу -->
+        <label for="photo" class="block mt-3 font-semibold">📸 Суретіңізді жүктеңіз</label>
+        <input type="file" id="photo" accept="image/*" class="mt-2">
+
+        <!-- Аты-жөні енгізу -->
+        <label for="citizen-name" class="block mt-3 font-semibold">🖊️ Аты-жөніңіз</label>
+        <input type="text" id="citizen-name" placeholder="Аты-жөніңіз" class="border px-4 py-2 mt-2 w-full">
+
+        <!-- Лауазым таңдау -->
+        <label for="position" class="block mt-3 font-semibold">🎩 Лауазымыңыз</label>
+        <select id="position" class="border px-4 py-2 mt-2 w-full">
+            <option>Министр</option>
+            <option>Президент Кеңесшісі</option>
+            <option>Байгайстан Журналисті</option>
+            <option>Той Экономикасын Зерттеуші</option>
+        </select>
+
+        <!-- Паспорт жасау батырмасы -->
+        <button onclick="generatePassport()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg">📜 Паспорт жасау</button>
+
+        <!-- 🔥 ЕСКЕРТУ ХАБАРЛАМАСЫ (ОСЫ ЖЕРГЕ ҚОСТЫМ) -->
+        <p id="passport" class="mt-4 text-lg font-semibold text-green-600"></p>
+    </div>
+</section>
+
+
+    <!-- Дайын паспорт -->
+    <section id="passport-section" class="hidden mt-6 bg-white p-6 rounded-lg shadow-lg w-96 mx-auto text-left">
+        <h2 class="text-2xl font-semibold text-center">📜 Байгайстан Азаматының Паспорты</h2>
+        <div class="flex items-center mt-4">
+            <img id="passport-photo" class="w-24 h-24 border rounded-lg">
+            <div class="ml-4">
+                <p><strong>👤 Аты-жөні:</strong> <span id="passport-name"></span></p>
+                <p><strong>🎩 Лауазымы:</strong> <span id="passport-position"></span></p>
+                <p><strong>🔢 Азаматтық ID:</strong> <span id="passport-id"></span></p>
+            </div>
+        </div>
+        <button onclick="downloadPassport()" class="mt-4 px-6 py-2 bg-green-500 text-white rounded-lg w-full">📥 Паспортты жүктеу</button>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white py-6 mt-10 text-lg text-center shadow-md">
+        <p>© 2025 Байгайстан Республикасы. Азаматтық алу тегін, бірақ көңілді!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
