@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Байгайстан Республикасы - Ресми Сайт</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Хедер -->
+    <header class="bg-blue-900 text-white py-6 shadow-lg text-center">
+        <h1 class="text-5xl font-bold uppercase">🇧🇹 Байгайстан Республикасы</h1>
+        <p class="text-lg mt-2 italic">"Әділет, әзіл және шексіз демалыс!"</p>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="bg-gray-800 py-4 text-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <span class="text-lg font-semibold">Мәзір</span>
+            <button id="menu-toggle" class="text-2xl">☰</button>
+        </div>
+        <div id="menu" class="hidden flex flex-col text-center mt-4 space-y-4 text-lg font-semibold">
+            <a href="news.html" class="hover:text-yellow-400 transition">📰 Жаңалықтар</a>
+            <a href="holidays.html" class="hover:text-yellow-400 transition">🎉 Ұлттық мерекелер</a>
+            <a href="government.html" class="hover:text-yellow-400 transition">🏛 Үкімет</a>
+            <a href="citizenship.html" class="hover:text-yellow-400 transition">📜 Азаматтық</a>
+            <a href="contact.html" class="hover:text-yellow-400 transition">📞 Байланыс</a>
+            <a href="travel.html" class="hover:text-yellow-400 transition">🛫 Саяхат және туризм</a>
+        </div>
+    </nav>
+    
+    <!-- Басты бет Контент -->
+    <section class="mt-10 p-10 text-center">
+        <h2 class="text-4xl font-bold">Байгайстан Республикасына қош келдіңіз!</h2>
+        <p class="mt-6 text-lg font-light">Біз - әлемдегі ең тұрақсыз тұрақты ел! Мұнда жұмыссыздық 0%, себебі жұмыс істеу мүлдем модада емес! </p>
+        <img src="images/baygaistan_flag.png" alt="Байгайстан Туы" class="mt-6 mx-auto w-1/3 rounded-xl shadow-lg border-4 border-blue-900">
+    </section>
+    
+     <!-- Ресми Ақпарат -->
+     <section class="bg-white py-10 mt-10 shadow-lg rounded-lg mx-auto w-3/4 text-center">
+        <h3 class="text-3xl font-semibold">🇰🇿 Мемлекеттік ұстанымдар</h3>
+        <p class="mt-4 text-lg">"Мұнда шындық пен әділет үстемдік етеді. Ақша жоқ болғандықтан, ешкім оны жымқыра алмайды!"</p>
+    </section>
+
+    <!-- Президенттің үндеуі -->
+    <section class="mt-10 p-10 text-center bg-white shadow-lg rounded-lg w-3/4 mx-auto">
+        <h2 class="text-4xl font-bold">📢 Президенттің Үндеуі</h2>
+        <p class="mt-4 text-lg font-light" id="president-message">"Еліміз жарқын болашаққа бет алды! Бірақ нақты қашан жететініміз белгісіз..."</p>
+        <img src="images/president.gif" alt="Президент сөйлеп тұр" class="mt-4 w-48 mx-auto rounded-lg shadow-md">
+    </section>
+
+    <!-- Президентке сұрақ қою -->
+    <section class="mt-10 p-10 text-center bg-blue-100 shadow-lg rounded-lg w-3/4 mx-auto">
+        <h2 class="text-3xl font-bold">❓ Президентке сұрақ қойыңыз</h2>
+        <input type="text" id="question" class="border px-4 py-2 mt-4 w-3/4" placeholder="Сұрағыңызды жазыңыз...">
+        <button onclick="askPresident()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg">Жіберу</button>
+        <p class="mt-4 text-lg font-semibold" id="president-answer"></p>
+    </section>
+
+    
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white py-6 mt-10 text-lg text-center shadow-md">
+        <p>© 2025 Байгайстан Республикасы. Барлық құқықтар күлкі мен шығармашылық арқылы қорғалған.</p>
+    </footer>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

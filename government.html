@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Үкімет – Байгайстан</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Хедер -->
+    <header class="bg-blue-900 text-white py-6 shadow-lg text-center">
+        <h1 class="text-5xl font-bold uppercase">🏛 Байгайстан Үкіметі</h1>
+        <p class="text-lg mt-2 italic">"Халық үшін емес, халықпен бірге басқару!"</p>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="bg-gray-800 py-4 text-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <span class="text-lg font-semibold">Мәзір</span>
+            <button id="menu-toggle" class="text-2xl">☰</button>
+        </div>
+        <div id="menu" class="hidden flex flex-col text-center mt-4 space-y-4 text-lg font-semibold">
+            <a href="index.html" class="hover:text-yellow-400 transition">🏠 Басты бет</a>
+            <a href="news.html" class="hover:text-yellow-400 transition">📰 Жаңалықтар</a>
+            <a href="holidays.html" class="hover:text-yellow-400 transition">🎉 Ұлттық мерекелер</a>
+            <a href="citizenship.html" class="hover:text-yellow-400 transition">📜 Азаматтық</a>
+            <a href="contact.html" class="hover:text-yellow-400 transition">📞 Байланыс</a>
+            <a href="travel.html" class="hover:text-yellow-400 transition">🛫 Саяхат және туризм</a>
+        </div>
+    </nav>
+    
+    <!-- Үкімет Контент -->
+    <section class="mt-10 p-10 text-center">
+        <h2 class="text-4xl font-bold">Біздің елбасылар</h2>
+        <p class="mt-4 text-lg font-light">Байгайстан Үкіметі ең жауапты адамдардан құралады!</p>
+        
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Президент -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="images/president.jpg" alt="Президент" class="w-40 h-40 mx-auto object-cover">
+                <h3 class="text-2xl font-semibold mt-4">👑 Президент</h3>
+                <p class="text-lg font-semibold">Елеусін тегі Жалғас</p>
+                <p class="mt-2 text-gray-600">"Мен ештеңе істемеймін, себебі халық бәрін өзі істеп жатыр!"</p>
+            </div>
+
+            <!-- Сыртқы істер министрі -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="images/foreign_minister.jpg" alt="Сыртқы істер министрі" class="w-40 h-40 mx-auto object-cover">
+                <h3 class="text-2xl font-semibold mt-4">🌍 Сыртқы істер министрі</h3>
+                <p class="text-lg font-semibold">Нұрғали Мағжан</p>
+                <p class="mt-2 text-gray-600">"Біздің елдің шекарасы – интернеттің шектеусіз кеңістігі!"</p>
+            </div>
+
+            <!-- Экономика министрі -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="images/economy_minister.jpg" alt="Экономика министрі" class="w-40 h-40 mx-auto object-cover">
+                <h3 class="text-2xl font-semibold mt-4">💰 Экономика министрі</h3>
+                <p class="text-lg font-semibold">Данай тегі Бағжан</p>
+                <p class="mt-2 text-gray-600">"Біздің бюджет шексіз, себебі ол мүлдем жоқ!"</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white py-6 mt-10 text-lg text-center shadow-md">
+        <p>© 2025 Байгайстан Республикасы. Барлық құқықтар елдің министрлерімен бірге ұйықтап жатыр.</p>
+    </footer>
+
+</body>
+</html>

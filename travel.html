@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Саяхат және туризм – Байгайстан</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Хедер -->
+    <header class="bg-blue-900 text-white py-6 shadow-lg text-center">
+        <h1 class="text-5xl font-bold uppercase">✈️ Байгайстанға қош келдіңіз!</h1>
+        <p class="text-lg mt-2 italic">"Бізге келу үшін картада бізді тауып көріңіз!"</p>
+    </header>
+
+    <nav class="bg-gray-800 py-4 text-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <span class="text-lg font-semibold">Мәзір</span>
+            <button id="menu-toggle" class="text-2xl">☰</button>
+        </div>
+        <div id="menu" class="hidden flex flex-col text-center mt-4 space-y-4 text-lg font-semibold">
+            <a href="index.html" class="hover:text-yellow-400 transition">🏠 Басты бет</a>
+            <a href="news.html" class="hover:text-yellow-400 transition">📰 Жаңалықтар</a>
+            <a href="holidays.html" class="hover:text-yellow-400 transition">🎉 Ұлттық мерекелер</a>
+            <a href="government.html" class="hover:text-yellow-400 transition">🏛 Үкімет</a>
+            <a href="citizenship.html" class="hover:text-yellow-400 transition">📜 Азаматтық</a>
+            <a href="contact.html" class="hover:text-yellow-400 transition">📞 Байланыс</a>
+        </div>
+    </nav>
+
+    <!-- Негізгі Контент -->
+    <main class="max-w-4xl mx-auto p-6 text-center">
+        <h2 class="text-3xl font-bold">🌍 Байгайстанға қалай жетуге болады?</h2>
+        <p class="text-lg mt-2">Байгайстанға жетудің ең оңай жолы – елестету! 🚀</p>
+        <ul class="text-lg list-disc list-inside mt-4">
+            <li>🗺️ <b>Картада жоқ</b> – Бірақ Google Maps-ке 10 рет қарасаңыз, бәлкім, көрінер.</li>
+            <li>🚁 <b>Әуе жолдары</b> – Бар, бірақ тек фантазияңызда.</li>
+            <li>🚢 <b>Теңіз арқылы</b> – Мұхитымыз жоқ, бірақ үміт бар!</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold mt-10">🏨 Қонақ үйлер мен демалыс</h2>
+        <p class="text-lg mt-2">Бізде ең керемет қонақ үйлер бар – бірақ орын жоқ! 😂</p>
+        <ul class="text-lg list-disc list-inside mt-4">
+            <li>🌟 <b>"5 жұлдызды қонақ үй"</b> – Жұлдыздар көп, бірақ ғимарат әлі салынбады.</li>
+            <li>🛖 <b>"Киіз үй & Spa"</b> – Табиғатпен үйлесімді демалыс, бірақ тапсырыс қабылданбайды.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold mt-10">🏛️ Байгайстанның көрікті жерлері</h2>
+        <p class="text-lg mt-2">Туристеріміз ең танымал жерлерге баруға асығады:</p>
+        <ul class="text-lg list-disc list-inside mt-4">
+            <li>🗿 <b>"Көрінбейтін мұражай"</b> – Билет тегін, бірақ ештеңе көрінбейді.</li>
+            <li>🌴 <b>"Шексіз демалыс аралы"</b> – Бірақ оған жету мүмкін емес.</li>
+            <li>⏳ <b>"Уақытсыздық аллеясы"</b> – Мұнда уақыт тоқтап қалған…</li>
+        </ul>
+
+        <p class="text-lg mt-6">Байгайстанға саяхат жасағыңыз келе ме? Бар болғаны көздеріңізді жұмып, армандаңыз! 😆</p>
+    </main>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+    
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-6">
+        <p>© 2025 Байгайстан Туризм Министрлігі | Бізге жетудің жалғыз жолы – армандау!</p>
+    </footer>
+</body>
+</html>
