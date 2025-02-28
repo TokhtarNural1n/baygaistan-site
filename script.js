@@ -58,12 +58,22 @@ function generatePassport() {
 // Паспортты сурет ретінде жүктеу
 function downloadPassport() {
     html2canvas(document.getElementById("passport-section")).then(canvas => {
-        let link = document.createElement("a");
-        link.download = "Baygaistan_Passport.png";
-        link.href = canvas.toDataURL();
-        link.click();
+        canvas.toBlob(blob => {
+            let link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "Baygaistan_Passport.png";
+
+            // Егер мобильді құрылғы болса, жаңа терезеде ашу
+            if (navigator.userAgent.match(/iPhone|iPad|Android/i)) {
+                let newTab = window.open();
+                newTab.document.write('<img src="' + link.href + '" style="width:100%;">');
+            } else {
+                link.click();
+            }
+        }, "image/png");
     });
 }
+
 
 // Президенттің үндеулері (әр 10 секунд сайын ауысады)
 const messages = [
